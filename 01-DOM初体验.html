@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  
+</head>
+<body>
+  <button id="btn">变大</button>
+  <br>
+  <img src="images/02.jpg" alt="图破了" id="img" width="200">
+  <script>
+    
+      var img = document.getElementById('img');
+      var btn = document.getElementById('btn');
+      var isBig = true;
+      btn.onclick = function () {
+        if (isBig) {
+          img.width = '800';
+          isBig = false;
+          btn.innerText = '变小';
+        } else {
+          img.width = '200';
+          isBig = true;
+          btn.innerText = '变大';
+          
+        }
+      }
+      img.title = '福利';
+      
+      </script>
+</body>
+</html>

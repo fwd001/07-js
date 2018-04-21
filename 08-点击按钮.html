@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <button title="1">按钮1</button>
+  <button title="2">按钮2</button>
+  <button title="3">按钮3</button>
+  <button title="4">按钮4</button>
+  <button title="5">按钮5</button>
+  <button title="6">按钮6</button>
+  <br>
+  <img src="imgs/1.jpg" alt="" id="img" width="300">
+  <script>
+  var btns = document.getElementsByTagName('button');
+  var img = document.getElementById('img');
+  for(var i = 0; i < btns.length; i++) {
+    btns[i].onclick = function () {
+      img.src = 'imgs/' + this.title + '.jpg';
+    }
+  }
+  </script>
+</body>
+</html>

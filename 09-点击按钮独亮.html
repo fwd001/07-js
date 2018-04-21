@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    .teal {
+      background-color: teal;
+    }
+  </style>
+</head>
+<body>
+  <button> 按钮 </button>
+  <button> 按钮 </button>
+  <button> 按钮 </button>
+  <button> 按钮 </button>
+  <button> 按钮 </button>
+  <button> 按钮 </button>
+  <button> 按钮 </button>
+  <button> 按钮 </button>
+
+  <script>
+    // var btns = document.getElementsByTagName('button');
+    // for(var i = 0; i < btns.length; i++) {
+    //   btns[i].onclick = function () {
+    //     clear();
+    //     this.className = 'teal';
+    //   }
+    // }
+    // function clear() {
+    //   for(var i = 0; i < btns.length; i++) {
+    //     btns[i].className = '';
+    //   }
+    // }
+    var flag;
+    var btns = document.getElementsByTagName('button');
+    for(var i = 0; i < btns.length; i++) {
+      btns[i].onclick = function () {
+        if (flag) {
+          flag.className = '';
+        }
+        flag = this;
+        flag.className = 'teal';
+      }
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <button id="btn">切换图片</button>
+  <br>
+  <img src="imgs/01.gif" alt="" id="img" width="200">
+  <script>
+    var btn = document.getElementById('btn');
+    var img = document.getElementById('img');
+    var imgNum = 1;
+    var arr = ['01','02', '0002']
+    btn.onclick = function () {
+      imgNum ++;
+      if (imgNum > 3) {
+        imgNum = 1;
+      }
+      img.src = 'imgs/' + arr[imgNum - 1] + '.gif'
+    }
+  </script>
+</body>
+</html>

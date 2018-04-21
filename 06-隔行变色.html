@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    .odd {
+      background-color: lime;
+    }
+
+    .even {
+      background-color: teal;
+    }
+  </style>
+</head>
+
+<body>
+  <button id="btn">变色</button>
+  <ul id="box">
+    <li>我是第1个li</li>
+    <li>我是第2个li</li>
+    <li>我是第3个li</li>
+    <li>我是第4个li</li>
+    <li>我是第5个li</li>
+    <li>我是第6个li</li>
+    <li>我是第7个li</li>
+    <li>我是第8个li</li>
+    <li>我是第9个li</li>
+    <li>我是第10个li</li>
+  </ul>
+  <ul id="two">
+    <li>我是别人人家的第1个li</li>
+    <li>我是别人人家的第2个li</li>
+    <li>我是别人人家的第3个li</li>
+    <li>我是别人人家的第4个li</li>
+    <li>我是别人人家的第5个li</li>
+    <li>我是别人人家的第6个li</li>
+    <li>我是别人人家的第7个li</li>
+    <li>我是别人人家的第8个li</li>
+    <li>我是别人人家的第9个li</li>
+    <li>我是别人人家的第10个li</li>
+  </ul>
+  <script>
+    var btn = document.getElementById('btn');
+    var box = document.getElementById('box');
+    var lis = box.getElementsByTagName('li');
+
+    var two = document.getElementById('two');
+    var lisT = two.getElementsByTagName('li');
+    var isOne = true;
+    var lisAll = document.getElementsByTagName('li');
+    btn.onclick = function () {
+      clearColor();        
+      var that;
+      if (isOne) {
+        that = lis
+        isOne = false
+      } else {
+        that = lisT
+        isOne = true;
+      }
+      for (var i = 0; i < that.length; i++) {
+        if (i % 2 == 0) {
+          that[i].className = 'odd';
+        } else {
+          that[i].className = 'even';
+        }
+      }
+    }
+    function clearColor() {
+      for (var i = 0; i < lisAll.length;i++) {
+        lisAll[i].className = '';
+      }
+    }
+  </script>
+</body>
+
+</html>

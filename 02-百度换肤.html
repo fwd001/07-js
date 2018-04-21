@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    body {
+      background: url(images/1.jpg) no-repeat;
+      background-size: cover;
+    }
+
+    * {
+      padding: 0;
+      margin: 0;
+    }
+
+    img {
+      vertical-align: top;
+    }
+
+    .box {
+      text-align: center;
+      background-color: rgba(255, 255, 255, 0.3);
+      padding: 10px 0;
+    }
+
+    ul {
+      list-style: none;
+      display: inline-block;
+      vertical-align: top;
+    }
+
+    ul li {
+      float: left;
+      margin-left: 5px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="box">
+    <ul>
+      <li>
+
+        <img src="images/1.jpg" alt="" width="200">
+
+      </li>
+      <li>
+
+        <img src="images/2.jpg" alt="" width="200">
+
+      </li>
+      <li>
+        <img src="images/3.jpg" alt="" width="200">
+
+      </li>
+      <li>
+
+        <img src="images/4.jpg" alt="" width="200">
+
+      </li>
+      <li>
+
+        <img src="images/5.jpg" alt="" width="200">
+
+      </li>
+    </ul>
+  </div>
+  <script>
+    var lis = document.querySelectorAll('ul li');
+    var i = 0, len = lis.length;
+
+    for (; i < len; i++) {
+      li = lis[i];
+      li.onclick = function () {
+        var img = this.children[0]
+        console.log(img);
+        document.body.style.backgroundImage = 'url(' + img.src + ')';
+        return;
+      }
+    }
+  </script>
+</body>
+
+</html>
